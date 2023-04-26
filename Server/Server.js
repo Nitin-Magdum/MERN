@@ -10,9 +10,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use("/api", userRoutes);
 
-
 const port = 8000 | process.env.PORT;
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

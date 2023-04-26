@@ -18,7 +18,7 @@ export default function UserInput() {
 
   const handleFirstNumberChange = (event) => {
     const input = event.target.value;
-    const regex = /^[1-9]\d*$/; // positive integer regex
+    const regex = /^[1-9]\d*$/; 
     if (regex.test(input)) {
       setFirstNumber(input);
       setFirstNumberError('');
@@ -33,7 +33,7 @@ export default function UserInput() {
 
   const handleSecondNumberChange = (event) => {
     const input = event.target.value;
-    const regex = /^[1-9]\d*$/; // positive integer regex
+    const regex = /^[1-9]\d*$/;
     if (regex.test(input)) {
       setSecondNumber(input);
       setSecondNumberError('');
@@ -46,8 +46,7 @@ export default function UserInput() {
 
 
   const handleGenerateClick = () => {
-    // Validate the inputs
-    const regex = /^[1-9]\d*$/; // positive integer regex
+    const regex = /^[1-9]\d*$/; 
     if (!regex.test(firstNumber)) {
       setFirstNumberError('Please enter a positive number.');
       return;
@@ -64,7 +63,6 @@ export default function UserInput() {
 
   useEffect(() => {
     if (isGenerating) {
-      // Call the API
       const url = 'http://localhost:8000/api/additionResponce';
       const payload = { firstNumber, secondNumber };
       axios.post(url, payload, { headers: { 'Content-Type': 'application/json' } })

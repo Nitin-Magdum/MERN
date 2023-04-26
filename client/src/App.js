@@ -8,7 +8,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: blue;
 `;
 
 function App() {
